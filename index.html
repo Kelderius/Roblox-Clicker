@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ <title>Roblox Clicker</title>
+ <link rel="stylesheet" href="styles.css" />
+ <style>
+  .button-image {
+ display: inline-block;
+ border: none;
+ cursor: pointer;
+  }
+
+  body {
+ font-family: Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ color: azure;
+ background-color: #121314;
+ overflow: hidden;
+  }
+
+  .container {
+ text-align: center;
+ background: #1e1f21;
+ padding: 40px 80px;
+ border-radius: 8px;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+  }
+
+  button {
+ padding: 20px 60px;
+ margin: 10px;
+ border: none;
+ border-radius: 30px;
+ background-color: #007bff;
+ color: white;
+ cursor: pointer;
+ transition: background-color 0.3s;
+  }
+
+ </style>
+</head>
+<body>
+ <div class="container">
+  <h1>Кликер <img src ="https://i.ibb.co/DH4XGcRm/IMG-6887.jpg" style="width: 30px;"></h1>
+  <p>Количество робуксов: <span id="clickCount">0</span></p>
+  <a href="#" class="button-image" id="clickButton">
+ <img src="https://i.ibb.co/qYNDcP3v/IMG-6884.jpg" alt=" " style="width: 200px" />
+  </a>
+ </div>
+ <script>
+   let clickCount = 0;
+   let totalMultiplier = 1;
+   let multiplier = 1;
+
+   const clickButton = document.getElementById('clickButton');
+   const clickCountDisplay = document.getElementById('clickCount');
+
+   clickButton.addEventListener('click', (event) => {
+ event.preventDefault();
+ clickCount += multiplier; 
+ clickCountDisplay.textContent = clickCount;
+   });
+ </script>
+</body>
+</html>
